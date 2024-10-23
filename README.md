@@ -1,13 +1,17 @@
-# MorseLink_connector
+# MorseLink Connector
 
-a connector for you Morse key to connect to Windows PC
+![completed](completed.png)
 
+A connector for your Morse key to connect to a Windows PC
 
-1. Open the website [JLCPCB](https://jlcpcb.com/), click the "instant quote" button, upload the JLC_board_making.zip, and order.
+1. Visit [JLCPCB](https://jlcpcb.com/), click "Instant Quote," upload the JLC_board_making.zip, and place your order.
    
-
-3. Purchase electronic components according to the BOM table and solder them to the PCB
+3. Purchase electronic components based on the BOM table and solder them to the PCB.
    
-
-5. and then download this [WCHISPTool_Setup_exe](https://www.wch-ic.com/downloads/WCHISPTool_Setup_exe.html) for Flash firmware, download firmware and connect the device to pc by USB-c cable.
+5. Download the [WCHISPTool Setup](https://www.wch-ic.com/downloads/WCHISPTool_Setup_exe.html) to flash the firmware, then connect the device to your PC using a USB-C cable.
    
+7. Select the MorseLink_firmware.hex file and click "Flash." No need to change the default settings.
+   
+9. Download and use the **[MorseLink](https://github.com/TateLuo/MorseLink)** software to configure the key for this connector.
+    
+    
