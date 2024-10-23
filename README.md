@@ -1,6 +1,5 @@
 # MorseLink_connector
 
-
 a connector for you Morse key to connect to Windows PC
 
 
