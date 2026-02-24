@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![MorseLink Connector Completed Device](completed.png)
-
 ## 🌐 Select Language / 选择语言
 ### 🇨🇳 [中文说明](#中文说明)
 ### 🇬🇧 [English](#english)
@@ -11,7 +9,7 @@
 </div>
 
 ---
-
+![MorseLink Connector Completed Device](completed.png)
 > 将传统摩尔斯电键转换为 USB 输入设备的开源硬件方案。  
 > An open-hardware USB bridge for connecting a Morse key to a Windows PC.
 
