@@ -4,7 +4,7 @@
 
 ## 🌐 Select Language / 选择语言
 ### 🇨🇳 [中文说明](#中文说明)
-### 🇬🇧 [English](#english)
+### en [English](#english)
 
 </div>
 
