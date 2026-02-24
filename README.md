@@ -118,12 +118,11 @@ A：确认烧录成功后检查 USB 焊接质量及设备管理器状态。
 
 ### Overview
 
-MorseLink Connector is an open-hardware USB interface board designed to convert a traditional Morse key into a USB input device recognized by Windows.
+MorseLink Connector is an open-hardware USB interface board designed to convert a traditional mechanical Morse key into a USB input device recognized by a computer.
 
-It is part of the MorseLink ecosystem, handling hardware-level signal acquisition and USB communication.
+It functions as a standard USB HID input device. In theory, it can work with any Morse training software that supports keyboard or mouse-based keying input.
 
-Companion software:  
-**MorseLink**  
+Companion software (optional):
 https://github.com/TateLuo/MorseLink
 
 ---
@@ -131,21 +130,22 @@ https://github.com/TateLuo/MorseLink
 ### Features
 
 - USB-C interface
-- Low-latency key sampling
-- Fully open-source schematic and PCB design
-- Direct manufacturing via JLCPCB
-- Prebuilt firmware image provided
+- Low-latency key input
+- Standard USB HID device behavior
+- Fully open-source schematic and PCB files
+- Direct manufacturing support via JLCPCB
+- Prebuilt firmware image included
 
 ---
 
 ### Repository Contents
 
 | File | Description |
-|---|---|
-| `PCB.pcbdoc` | PCB source (Altium Designer) |
-| `schematic diagram.schdoc` | Schematic source |
+|------|------------|
+| `PCB.pcbdoc` | PCB source file (Altium Designer) |
+| `schematic diagram.schdoc` | Schematic source file |
 | `JLC_board_making.zip` | Manufacturing package (Gerber/Drill/Flying Probe) |
-| `MorseLink_firmware.hex` | Firmware image |
+| `MorseLink_firmware.hex` | Firmware image for flashing |
 | `completed.png` | Finished hardware photo |
 | `LICENSE` | Apache-2.0 license |
 
@@ -153,13 +153,46 @@ https://github.com/TateLuo/MorseLink
 
 ### Quick Start
 
-1. Upload `JLC_board_making.zip` to JLCPCB.
-2. Assemble according to schematic and PCB files.
-3. Flash firmware using WCHISPTool.
-4. Configure via MorseLink software.
+#### 1) Order the PCB
 
-WCHISPTool download:  
-https://www.wch-ic.com/downloads/WCHISPTool_Setup_exe.html
+1. Visit https://jlcpcb.com/
+2. Open **Instant Quote**
+3. Upload the `JLC_board_making.zip` file directly
+
+> Important: Upload the original ZIP file from the repository.  
+> Do not unzip and recompress it, as this may cause manufacturing file recognition issues.
+
+---
+
+#### 2) Assembly
+
+1. Generate a BOM using `schematic diagram.schdoc` and `PCB.pcbdoc`
+2. Purchase the required components
+3. Assemble and solder all parts
+4. After soldering, verify:
+   - No short circuit between power and ground
+   - Proper USB-C solder joints
+   - Correct orientation of MCU and polarized components
+
+---
+
+#### 3) Flash Firmware
+
+1. Download WCHISPTool:  
+   https://www.wch-ic.com/downloads/WCHISPTool_Setup_exe.html
+2. Connect the board to a Windows PC using a data-capable USB-C cable
+3. Open WCHISPTool and select `MorseLink_firmware.hex`
+4. Keep default settings and start flashing
+
+---
+
+#### 4) Configure and Test
+
+1. Download and run MorseLink (optional):  
+   https://github.com/TateLuo/MorseLink
+2. Confirm that the device is recognized by the system
+3. Configure parameters if required
+4. Connect your Morse key and test key input
 
 ---
 
@@ -167,10 +200,11 @@ https://www.wch-ic.com/downloads/WCHISPTool_Setup_exe.html
 
 - OS: Windows recommended
 - Interface: USB-C
+- Device Type: Standard USB HID input device
 
 ---
 
 ## License
 
 Licensed under the **Apache License 2.0**.  
-See `LICENSE` for details.
+See the `LICENSE` file for details.
