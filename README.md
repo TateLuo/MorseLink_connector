@@ -184,6 +184,20 @@ https://github.com/TateLuo/MorseLink
 3. Open WCHISPTool and select `MorseLink_firmware.hex`
 4. Keep default settings and start flashing
 
+<details>
+
+<summary>MIDI output instructions (e.g. for <a href="https://learncw.vailmorse.com/">Vail CW School</a>)</summary>
+<br>
+
+For MIDI output, please flash `midi.hex`. 
+
+Technical info:
+- Dits (left paddle) are Channel 0, note 1
+- Dahs (right paddle) are Channel 0, note 2
+
+<br>
+</details>
+
 ---
 
 #### 4) Configure and Test
